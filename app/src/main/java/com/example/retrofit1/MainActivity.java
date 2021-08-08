@@ -45,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                         ResponseModel model = response.body();
-                        String fname = model.getData().getFirstName();
-                        String lname = model.getData().getLastName();
+                        String firstName = model.getData().getFirstName();
+                        String lastName = model.getData().getLastName();
                         String email = model.getData().getEmail();
-                        mTvFirstName.setText(fname);
-                        mTvLastName.setText(lname);
+                        mTvFirstName.setText(firstName);
+                        mTvLastName.setText(lastName);
                         mTvEmail.setText(email);
                         Glide.with(mIvAvatar).load(model.getData().getAvatar()).into(mIvAvatar);
                     }
